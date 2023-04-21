@@ -37,6 +37,12 @@ inputs:
         PG_CONNECT_STRING: ${output:${stage}:${app}:fullstack-db.private.connectionString}
   apigatewayConf: # API 网关
     enableCORS: true # 允许跨域
+    customDomains: # 自定义域名绑定
+     - domain: blog.weizhengda.com
+       certificateId: 4q2mXgbz
+       protocols: 
+         - http
+         - https
     protocols:
       - http
       - https
